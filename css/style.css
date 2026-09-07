@@ -1604,3 +1604,12 @@ body {
     background: rgba(201, 168, 76, 0.25);
     color: #ffffff;
 }
+
+.naptip-logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: rgba(201, 168, 76, 0.1);
+    padding: 4px;
+}
