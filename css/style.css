@@ -1613,3 +1613,223 @@ body {
     background: rgba(201, 168, 76, 0.1);
     padding: 4px;
 }
+
+/* ================================================================
+   AUDIO DOWNLOAD LIST - New Section
+   ================================================================ */
+
+.audio-download-section {
+    background: #0f1a2b;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+    border: 1px solid #2a3a4a;
+}
+
+.audio-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e8ecf0;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #2a3a4a;
+}
+
+.audio-section-header i {
+    color: #c9a84c;
+    font-size: 1.2rem;
+}
+
+.audio-section-header .audio-count {
+    margin-left: auto;
+    font-weight: 400;
+    color: #8a9ab0;
+    font-size: 0.75rem;
+    background: rgba(201, 168, 76, 0.08);
+    padding: 0.15rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(201, 168, 76, 0.08);
+}
+
+/* Individual Audio Items */
+.audio-download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.audio-download-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #2a3a4a;
+    transition: all 0.3s;
+    flex-wrap: wrap;
+}
+
+.audio-download-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(201, 168, 76, 0.2);
+    transform: translateX(4px);
+}
+
+.audio-file-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(201, 168, 76, 0.08);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #c9a84c;
+}
+
+.audio-file-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.audio-file-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #e8ecf0;
+    margin-bottom: 0.3rem;
+    word-break: break-all;
+}
+
+.audio-file-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #b0c0d8;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
+.audio-file-note i {
+    color: #c9a84c;
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.audio-file-note strong {
+    color: #e8ecf0;
+}
+
+.audio-file-meta {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    font-size: 0.7rem;
+    color: #6a7a90;
+}
+
+.audio-file-meta i {
+    color: #8a9ab0;
+    margin-right: 0.2rem;
+}
+
+.audio-file-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.audio-download-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #c9a84c;
+    color: #0a121f;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    margin-top: 0.2rem;
+    align-self: center;
+}
+
+.audio-download-btn:hover {
+    background: #dab95e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201, 168, 76, 0.25);
+}
+
+.audio-download-btn:active {
+    transform: scale(0.95);
+}
+
+.audio-download-btn i {
+    font-size: 0.85rem;
+}
+
+/* ================================================================
+   RESPONSIVE - Audio Download List
+   ================================================================ */
+
+@media (max-width: 768px) {
+    .audio-download-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .audio-download-btn {
+        align-self: stretch;
+        justify-content: center;
+        padding: 0.6rem;
+    }
+
+    .audio-file-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .audio-file-name {
+        font-size: 0.7rem;
+    }
+
+    .audio-file-note {
+        font-size: 0.75rem;
+    }
+
+    .audio-file-meta {
+        font-size: 0.65rem;
+        gap: 0.8rem;
+    }
+
+    .audio-section-header {
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .audio-download-section {
+        padding: 1rem;
+    }
+
+    .audio-download-item {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .audio-download-btn {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
